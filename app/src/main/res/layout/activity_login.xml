@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:background="@color/Backgroundt"
+    tools:context=".loggedIn">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="108dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="LOGIN PAGE"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="229dp"
+
+        android:layout_marginBottom="@android:dimen/app_icon_size"
+        android:hint="email"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="350dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/loginn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="174dp"
+        android:onClick="login"
+        android:text="loginn"></Button>
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_centerHorizontal="true"
+     android:layout_below="@+id/loginn"
+        android:onClick="go2Rester"
+        android:text="To Register click here"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

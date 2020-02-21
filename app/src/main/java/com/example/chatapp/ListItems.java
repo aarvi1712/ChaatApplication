@@ -1,14 +1,14 @@
 package com.example.chatapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 public class ListItems extends AppCompatActivity {
 
 
@@ -24,7 +24,21 @@ public class ListItems extends AppCompatActivity {
             simpleList = (ListView) findViewById(R.id.simpleListView);
             CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), countryList, flags);
             simpleList.setAdapter(customAdapter);
+            simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener()
+            {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position,
+                                        long id) {
+
+                    startActivity(new Intent(ListItems.this,GloobalRoom.class));
+
+
+                }
+            });
         }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -32,6 +46,8 @@ public class ListItems extends AppCompatActivity {
             inflater.inflate(R.menu.menu_items,menu);
         return true;
     }
+
+
 
         /*  public boolean onCreateOptionsMenu (Menu menu){
                 MenuInflater inflater = getMenuInflater();

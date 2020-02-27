@@ -5,16 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GloobalRoom">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
 
+        android:layout_height="match_parent"
+      android:layout_margin="15dp"
+            android:layout_above="@id/textbutton"
+        android:gravity="bottom"
+        android:padding="20dp"
+
+        android:textSize="16dp"
+
+        />
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_alignParentBottom="true"
+      android:id="@+id/textbutton"
       android:layout_height="wrap_content"
       android:orientation="horizontal">
 
       <EditText
-          android:id="@+id/editText"
+          android:id="@+id/editText1"
           android:layout_width="313dp"
           android:layout_height="match_parent"
           android:ems="10"
@@ -24,32 +37,16 @@
 
       <Button
           android:layout_marginRight="1dp"
-        android:id="@+id/button"
+        android:id="@+id/enter"
         android:layout_gravity="right"
 
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
-
-
-
-        android:background="@color/colorPrimary"
-
-        android:text="Send" />
-  </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="383dp"
-
-        android:layout_height="634dp"
-        android:textAlignment="gravity"
-        android:textSize="16dp"
-        android:text="ram is here"
-        android:padding="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="19dp"
+        android:layout_height="wrap_content"
+          android:gravity="center"
+          android:background="@drawable/ic_send_black_24dp"
 
         />
+  </LinearLayout>
+
+
 </RelativeLayout>
